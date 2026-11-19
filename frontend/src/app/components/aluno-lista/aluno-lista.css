@@ -1,0 +1,37 @@
+h2 {
+  margin: 28px 0 8px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1565c0;
+}
+
+table {
+  width: 100%;
+  border: 1px solid #8a8a8a;
+}
+
+th.mat-mdc-header-cell {
+  background: #d0d0d0;
+  font-weight: 500;
+}
+
+tr.mat-mdc-row:nth-child(odd) {
+  background: #a6c8cc;
+}
+
+tr.mat-mdc-row:nth-child(even) {
+  background: #fff;
+}
+
+td.mat-mdc-cell,
+th.mat-mdc-header-cell {
+  border-right: 1px solid #b0b0b0;
+}
+
+.icone-editar {
+  --mat-icon-button-icon-color: #1976d2;
+}
+
+.icone-remover {
+  --mat-icon-button-icon-color: #d32f2f;
+}

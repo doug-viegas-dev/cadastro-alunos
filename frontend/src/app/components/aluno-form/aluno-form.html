@@ -1,0 +1,60 @@
+<form [formGroup]="formAlunos" (ngSubmit)="salvar()">
+  <fieldset>
+    <legend>{{ aluno() ? 'Editando Aluno' : 'Novo Aluno' }}</legend>
+
+    <div class="grade">
+      <mat-form-field appearance="outline" subscriptSizing="dynamic" class="metade">
+        <mat-label>Nome</mat-label>
+        <input matInput formControlName="nome" />
+        @if (formAlunos.controls.nome.hasError('required')) {
+          <mat-error>O nome é obrigatório.</mat-error>
+        }
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" subscriptSizing="dynamic" class="metade">
+        <mat-label>E-mail</mat-label>
+        <input matInput formControlName="email" />
+        @if (formAlunos.controls.email.hasError('required')) {
+          <mat-error>O e-mail é obrigatório.</mat-error>
+        }
+        @if (formAlunos.controls.email.hasError('pattern')) {
+          <mat-error>O e-mail não é válido.</mat-error>
+        }
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" subscriptSizing="dynamic">
+        <mat-label>Telefone</mat-label>
+        <input matInput formControlName="telefone" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" subscriptSizing="dynamic">
+        <mat-label>Celular</mat-label>
+        <input matInput formControlName="celular" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" subscriptSizing="dynamic">
+        <mat-label>CPF</mat-label>
+        <input matInput formControlName="cpf" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" subscriptSizing="dynamic">
+        <mat-label>Data de Nascimento</mat-label>
+        <input matInput formControlName="data_nascimento" placeholder="dd/mm/aaaa" />
+        @if (formAlunos.controls.data_nascimento.invalid) {
+          <mat-error>Data inválida (dd/mm/aaaa).</mat-error>
+        }
+      </mat-form-field>
+    </div>
+
+    <div class="acoes">
+      <button mat-flat-button type="button" class="btn-cancelar" (click)="cancelar()">
+        <mat-icon fontSet="material-symbols-outlined">block</mat-icon>
+        Cancelar
+      </button>
+      <button mat-flat-button type="submit" class="btn-salvar">
+        <mat-icon fontSet="material-symbols-outlined">save</mat-icon>
+        {{ aluno() ? 'Atualizar' : 'Adicionar' }}
+      </button>
+    </div>
+  </fieldset>
+</form>

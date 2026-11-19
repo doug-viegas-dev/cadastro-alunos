@@ -1,0 +1,13 @@
+@if (erro()) {
+  <p class="erro">{{ erro() }}</p>
+}
+<app-aluno-form 
+[aluno] = "alunoEmEdicao()"
+  (alunoSalvo)="salvarAluno($event)"
+  (cancelado)="cancelarEdicao()"
+></app-aluno-form>
+<app-aluno-lista
+  [alunos]="alunos()"
+  (iniciarEdicao)="iniciarEdicao($event)"
+  (remover)="remover($event)"
+></app-aluno-lista>

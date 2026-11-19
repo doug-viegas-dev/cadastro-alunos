@@ -1,0 +1,12 @@
+# Dependências e segredos
+node_modules/
+.env
+
+# Materiais de estudo e configuração do editor (não fazem parte do projeto)
+CLAUDE.md
+PLANO.md
+.vscode/
+
+# Sobras de um npm install feito na raiz
+/package.json
+/package-lock.json

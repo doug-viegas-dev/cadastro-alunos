@@ -1,0 +1,14 @@
+:host {
+  display: block;
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.erro {
+  margin: 0 0 12px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  background: #fdecea;
+  color: #b71c1c;
+}
